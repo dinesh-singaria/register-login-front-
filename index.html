@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.rtl.min.css"
+      integrity="sha384-DOXMLfHhQkvFFp+rWTZwVlPVqdIhpDVYT9csOnHSgWQWPX0v5MCGtjCJbY6ERspU"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/c4304422eb.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" type="text/css" href="" />
+    <title></title>
+    <style>
+      .btn {
+        margin-left: 0.5rem;
+      }
+
+      .tab-content {
+        margin-left: 35%;
+        margin-right: 35%;
+      }
+
+      .nav {
+        margin-top: 5%;
+        margin-left: 35%;
+        margin-right: 35%;
+        /* --bs-nav-link-hover-color: #198754;
+        --bs-nav-link-color: #198754; */
+      }
+
+      /* .nav-link {
+        --bs-nav-pills-link-active-bg: #198754;
+      } */
+      hr {
+        margin: 1rem 0;
+        color: inherit;
+        border: 0;
+        border-top: 1px solid;
+        opacity: 0.25;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+
+      .nav-justified .nav-item,
+      .nav-justified > .nav-link {
+        flex-basis: 0;
+        flex-grow: 1;
+        text-align: center;
+        margin-right: 4px;
+      }
+      .form-check-input:checked {
+        background-color: #198754;
+        border-color: #198754;
+      }
+
+      a {
+        color: #198754;
+        text-decoration: none;
+      }
+      /* .nav-link:focus,
+      .nav-link:hover {
+        color: #dee2e6;
+      } */
+      /* .sign {
+        background-color: #198754;
+        border-color: #198754;
+      } */
+
+      /* .nav-item a:active {
+        color: white;
+        background-color: #198754;
+      } */
+
+      .btn-secondary {
+        --bs-btn-color: #198754;
+        --bs-btn-bg: #d3f9e7;
+        --bs-btn-border-color: rgb(0 0 0 / 8%);
+        --bs-btn-hover-color: #a9ffd7;
+        --bs-btn-hover-bg: d3f9e7;
+        --bs-btn-hover-border-color: rgb(0 0 0 / 13%);
+        --bs-btn-focus-shadow-rgb: 130, 138, 145;
+        --bs-btn-active-color: #fff;
+        --bs-btn-active-bg: #198754;
+        --bs-btn-active-border-color: #51585e;
+        --bs-btn-active-shadow: inset 0 3px 5pxrgba (0, 0, 0, 0.125);
+        --bs-btn-disabled-color: #fff;
+        --bs-btn-disabled-bg: #6c757d;
+        --bs-btn-disabled-border-color: #6c757d00;
+      }
+
+      .btn-primary {
+        --bs-btn-color: #fff;
+        --bs-btn-bg: #198754;
+        --bs-btn-border-color: #198754;
+        --bs-btn-hover-color: #fff;
+        --bs-btn-hover-bg: #198754;
+        --bs-btn-hover-border-color: #198754;
+        --bs-btn-focus-shadow-rgb: 49, 132, 253;
+        --bs-btn-active-color: #ffffff;
+        --bs-btn-active-bg: #198754;
+        --bs-btn-active-border-color: #198754;
+        --bs-btn-active-shadow: inset 0 3px 5pxrgba (0, 0, 0, 0.125);
+        --bs-btn-disabled-color: #198754;
+        --bs-btn-disabled-bg: #ffffff;
+        --bs-btn-disabled-border-color: #198754;
+      }
+
+      .form-check-label {
+        margin-left: 2rem;
+      }
+      .nav-tab .nav-link {
+        background-color: #fff;
+        color: #198754;
+        border: 1px solid #198754;
+        border-radius: 0.375rem;
+      }
+      .nav-tab .nav-link.active {
+        background-color: #198754;
+        color: #fff;
+      }
+
+      /* .nav-pills .nav-link:active {
+        background-color: #198754;
+        color: #fff;
+        border: #198754;
+      } */
+
+      /* .nav-pills {
+        --bs-nav-pills-border-radius: 0.375rem;
+        --bs-nav-pills-link-active-color: #f8f9fa;
+        --bs-nav-pills-link-active-bg: #198754;
+      } */
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Stock Visualiser</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Dropdown
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Disabled</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- Pills navs -->
+    <ul
+      class="nav nav-tab nav-justified mb-3"
+      id="ex1"
+      role="tablist"
+      style="padding-left: 0"
+    >
+      <li class="nav-item" role="presentation">
+        <a
+          class="nav-link active"
+          id="tab-login"
+          data-toggle="tab"
+          href="#pills-login"
+          role="tab"
+          aria-controls="pills-login"
+          aria-selected="true"
+          >Login</a
+        >
+      </li>
+      <li class="nav-item" role="presentation">
+        <a
+          class="nav-link"
+          id="tab-register"
+          data-toggle="tab"
+          href="#pills-register"
+          role="tab"
+          aria-controls="pills-register"
+          aria-selected="false"
+          >Register</a
+        >
+      </li>
+    </ul>
+    <hr style="margin-left: 35%; margin-right: 35%; color: #198754" />
+    <!-- Pills navs -->
+
+    <!-- Pills content -->
+    <div class="tab-content">
+      <div
+        class="tab-pane fade show active"
+        id="pills-login"
+        role="tabpanel"
+        aria-labelledby="tab-login"
+      >
+        <form>
+          <!-- <div class="text-center mb-3">
+            <p>Sign in with:</p>
+            <button type="button" class="btn btn-secondary btn-floating mx-1">
+              <i class="fab fa-facebook-f"></i>
+            </button>
+            56
+            <button type="button" class="btn btn-secondary btn-floating mx-1">
+              <i class="fab fa-google"></i>
+            </button>
+
+            <button type="button" class="btn btn-secondary btn-floating mx-1">
+              <i class="fab fa-twitter"></i>
+            </button>
+
+            <button type="button" class="btn btn-secondary btn-floating mx-1">
+              <i class="fab fa-github"></i>
+            </button>
+          </div>
+
+          <p class="text-center">or:</p> -->
+
+          <!-- Email input -->
+          <div class="form-outline mb-4">
+            <input
+              type="email"
+              id="loginName"
+              class="form-control"
+              placeholder="Email or Username"
+            />
+            <!-- <label class="form-label" for="loginName">Email or username</label> -->
+          </div>
+
+          <!-- Password input -->
+          <div class="form-outline mb-4">
+            <input
+              type="password"
+              id="loginPassword"
+              class="form-control"
+              placeholder="Password"
+            />
+            <!-- <label class="form-label" for="loginPassword">Password</label> -->
+          </div>
+
+          <!-- 2 column grid layout -->
+          <div class="row mb-4">
+            <div class="col-md-6 d-flex justify-content-center">
+              <!-- Checkbox -->
+              <div class="form-check mb-3 mb-md-0">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="loginCheck"
+                  checked
+                />
+                <label class="form-check-label" for="loginCheck">
+                  Remember me
+                </label>
+              </div>
+            </div>
+
+            <div class="col-md-6 d-flex justify-content-center">
+              <!-- Simple link -->
+              <a href="#!">Forgot password?</a>
+            </div>
+          </div>
+
+          <!-- Submit button -->
+          <button type="submit" class="btn btn-primary btn-block mb-4">
+            Sign in
+          </button>
+
+          <!-- Register buttons -->
+          <div class="text-center">
+            <p>Not a member? <a href="#!">Register</a></p>
+          </div>
+        </form>
+      </div>
+      <div
+        class="tab-pane fade show"
+        id="pills-register"
+        role="tabpanel"
+        aria-labelledby="tab-register"
+      >
+        <form>
+          <!-- <div class="text-center mb-3">
+            <p>Sign up with:</p>
+            <button type="button" class="btn btn-secondary btn-floating mx-1">
+              <i class="fab fa-facebook-f"></i>
+            </button>
+
+            <button type="button" class="btn btn-secondary btn-floating mx-1">
+              <i class="fab fa-google"></i>
+            </button>
+
+            <button type="button" class="btn btn-secondary btn-floating mx-1">
+              <i class="fab fa-twitter"></i>
+            </button>
+
+            <button type="button" class="btn btn-secondary btn-floating mx-1">
+              <i class="fab fa-github"></i>
+            </button>
+          </div>
+
+          <p class="text-center">or:</p> -->
+
+          <!-- Name input -->
+          <div class="form-outline mb-4">
+            <input
+              type="text"
+              id="registerName"
+              class="form-control"
+              placeholder="Name"
+            />
+            <!-- <label class="form-label" for="registerName">Name</label> -->
+          </div>
+
+          <!-- Username input -->
+          <div class="form-outline mb-4">
+            <input
+              type="text"
+              id="registerUsername"
+              class="form-control"
+              placeholder="Username"
+            />
+            <!-- <label class="form-label" for="registerUsername">Username</label> -->
+          </div>
+
+          <!-- Email input -->
+          <div class="form-outline mb-4">
+            <input
+              type="email"
+              id="registerEmail"
+              class="form-control"
+              placeholder="Email"
+            />
+            <!-- <label class="form-label" for="registerEmail">Email</label> -->
+          </div>
+
+          <!-- Password input -->
+          <div class="form-outline mb-4">
+            <input
+              type="password"
+              id="registerPassword"
+              class="form-control"
+              placeholder="Password"
+            />
+            <!-- <label class="form-label" for="registerPassword">Password</label> -->
+          </div>
+
+          <!-- Repeat Password input -->
+          <div class="form-outline mb-4">
+            <input
+              type="password"
+              id="registerRepeatPassword"
+              class="form-control"
+              placeholder="Repeat password"
+            />
+            <!-- <label class="form-label" for="registerRepeatPassword">Repeat password</label> -->
+          </div>
+
+          <!-- Checkbox -->
+          <!-- <div class="form-check d-flex justify-content mb-4">
+            <input
+              class="form-check-input me-2"
+              type="checkbox"
+              value=""
+              id="registerCheck"
+              checked
+              aria-describedby="registerCheckHelpText"
+            />
+            <label class="form-check-label" for="registerCheck"
+              >I have read and agree to the terms</label
+            >
+          </div> -->
+
+          <!-- Submit button -->
+          <button type="submit" class="btn btn-primary btn-block mb-3">
+            Sign in
+          </button>
+        </form>
+      </div>
+    </div>
+    <!-- Pills content -->
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    -->
+  </body>
+  <script src="jquery-3.6.1.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script>
+    $(".nav .nav-link").on("click", function () {
+      $(".nav").find(".active").removeClass("active");
+      $(this).addClass("active");
+    });
+  </script>
+</html>
